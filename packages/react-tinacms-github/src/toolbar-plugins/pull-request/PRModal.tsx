@@ -30,7 +30,7 @@ export const PRModal = ({ forkRepoFullName, baseRepoFullName }: Props) => {
           setFetchedPR({ id: null })
         }
       })
-      .catch(err => {
+      .catch(() => {
         setPrError(`Could not fetch Pull Requests`)
       })
   }
@@ -43,10 +43,10 @@ export const PRModal = ({ forkRepoFullName, baseRepoFullName }: Props) => {
         titleInput.current.value,
         bodyInput.current.value
       )
-      .then(response => {
+      .then(() => {
         checkForPR() // TODO - can we use PR from response instead of refetching?
       })
-      .catch(err => {
+      .catch(() => {
         setPrError(`Pull Request failed, are you sure you have any changes?`)
       })
   }

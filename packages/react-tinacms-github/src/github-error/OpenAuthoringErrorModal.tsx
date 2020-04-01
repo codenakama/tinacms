@@ -2,7 +2,7 @@ import {
   ActionableModalOptions,
   ActionableModal,
 } from '../misc/ActionableModal'
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState } from 'react'
 import { useCMS } from 'tinacms'
 import OpenAuthoringError from '../OpenAuthoringError'
 import { useOpenAuthoring } from '../open-authoring/OpenAuthoringProvider'
